@@ -73,6 +73,6 @@ run_analysis <- function() {
   names(final_data)[1] <- "subject_id" # rename group 1 (necessary because of aggregate function)
   names(final_data)[2] <- "activity_name" # rename group 2 (necessary because of aggregate function)
   
-  return(final_data)
+  write.table(final_data, file = "final_data.txt", row.name = FALSE)
   
 }
